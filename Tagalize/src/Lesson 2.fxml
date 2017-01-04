@@ -1,0 +1,2131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane cache="true" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="680.0" minWidth="880.0" prefHeight="680.0" prefWidth="880.0" style="-fx-border-color: black; -fx-border-radius: 5; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Lesson2Controller">
+   <children>
+      <VBox layoutX="-1.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="880.0">
+         <children>
+            <HBox alignment="CENTER" cache="true">
+               <children>
+                  <BorderPane prefHeight="37.0" prefWidth="880.0">
+                     <left>
+                        <Text cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text=" Lesson 2" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </left>
+                     <right>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Hyperlink fx:id="help" alignment="CENTER" cache="true" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#showHelp" prefHeight="37.0" prefWidth="62.0" text="Help" BorderPane.alignment="TOP_CENTER">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="19.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink fx:id="close" alignment="CENTER" cache="true" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#closeStage" prefHeight="13.0" prefWidth="38.0" text="X">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="19.0" />
+                                 </font>
+                              </Hyperlink>
+                           </children>
+                        </HBox>
+                     </right>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </BorderPane>
+               </children>
+            </HBox>
+            <Line endX="880.0" strokeWidth="2.0">
+               <effect>
+                  <DropShadow height="20.0" offsetY="3.0" radius="5.5" width="4.0" />
+               </effect>
+            </Line>
+         </children>
+      </VBox>
+      <TabPane fx:id="tabPane" cache="true" layoutX="6.0" layoutY="56.0" prefHeight="620.0" prefWidth="865.0" side="LEFT" styleClass="STYLE_CLASS_FLOATING" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="125.0" tabMaxWidth="130.0" tabMinHeight="125.0" tabMinWidth="115.0">
+        <tabs>
+          <Tab fx:id="dialogTab" closable="false" style="-fx-rotate: 90; -fx-font: 20px System;" text="Dialog">
+            <content>
+              <AnchorPane cache="true" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="dialogTextArea" cache="true" editable="false" prefHeight="620.0" prefWidth="731.0" promptText="Insert text here" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextArea>
+                        <ToggleButton fx:id="listenButton0" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="632.0" mnemonicParsing="false" onAction="#handleListenButton" text="Listen" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </ToggleButton>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="miniDialog1Tab" closable="false" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Mini &#10;Dialog 1">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="miniDialog1TextArea" editable="false" prefHeight="620.0" prefWidth="731.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font></TextArea>
+                        <ToggleButton fx:id="listenButton1" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="632.0" mnemonicParsing="false" onAction="#handleListenButton" text="Listen" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="miniDialog2Tab" closable="false" disable="true" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Mini &#10;Dialog 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="miniDialog2TextArea" editable="false" prefHeight="355.0" prefWidth="731.0" wrapText="true" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextArea>
+                        <ToggleButton fx:id="listenButton2" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="632.0" mnemonicParsing="false" onAction="#handleListenButton" text="Listen" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </ToggleButton>
+                        <ScrollPane layoutX="8.0" layoutY="361.0" prefHeight="255.0" prefViewportHeight="212.0" prefViewportWidth="461.0" prefWidth="463.0">
+                           <content>
+                              <VBox layoutX="8.0" layoutY="406.0" prefWidth="581.0" style="-fx-border-color: gray;">
+                                 <children>
+                                    <BorderPane maxWidth="425.0" minWidth="425.0" prefHeight="25.0" prefWidth="425.0">
+                                       <left>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Practice" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </left>
+                                       <right>
+                                          <ToggleButton fx:id="checkAnswer" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#checkAnswer" text="Check answer" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                             <graphic>
+                                                <TextFlow lineSpacing="20.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="10.0" strokeType="INSIDE" width="10.0" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Correct">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     ">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="10.0" strokeType="INSIDE" width="10.0" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Incorrect">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </TextFlow>
+                                             </graphic>
+                                          </ToggleButton>
+                                       </right>
+                                       <VBox.margin>
+                                          <Insets top="2.0" />
+                                       </VBox.margin>
+                                    </BorderPane>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Complete the dialogs below.&#10;Drag the items from box to the blank fields.">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Jinky:" wrappingWidth="100.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blank1" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="25.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="remove1" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="   Jayvee:" wrappingWidth="100.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mabuti nman." wrappingWidth="214.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="25.0" prefWidth="409.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. John:" wrappingWidth="100.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Magandang gabi," wrappingWidth="156.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blank2" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="_________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="remove2" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="   Revie:" wrappingWidth="100.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blank3" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="remove3" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="25.0" prefWidth="409.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="   John:" wrappingWidth="100.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kumusta" wrappingWidth="80.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blank4" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="_____" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="25.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="remove4" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="   Revie:" wrappingWidth="100.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blank5" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="remove5" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <VBox fx:id="choiceBox" alignment="CENTER" layoutX="475.0" layoutY="361.0" prefHeight="256.0" prefWidth="252.0" style="-fx-border-color: black;">
+                           <children>
+                              <Text fx:id="choice1" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="Revie">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Text>
+                              <Text fx:id="choice2" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="Kumusta ka Jayvee">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Text>
+                              <Text fx:id="choice3" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="ka">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Text>
+                              <Text fx:id="choice4" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayos lang">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Text>
+                              <Text fx:id="choice5" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="kayo">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Text>
+                              <Text fx:id="choice6" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="Magandang gabi din, John">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="miniDialog3Tab" closable="false" disable="true" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Mini &#10;Dialog 3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="miniDialog3TextArea" editable="false" prefHeight="297.0" prefWidth="731.0" wrapText="true" AnchorPane.bottomAnchor="323.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextArea>
+                        <ToggleButton fx:id="listenButton3" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="632.0" mnemonicParsing="false" onAction="#handleListenButton" text="Listen" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </ToggleButton>
+                        <ScrollPane layoutX="1.0" layoutY="299.0" prefHeight="320.0" prefViewportHeight="212.0" prefViewportWidth="461.0" prefWidth="727.0">
+                           <content>
+                              <VBox alignment="CENTER_LEFT" prefWidth="690.0" style="-fx-border-color: gray;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Practice">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fill in the blanks with the given words from a scenario. Supply incorrect information for the middle slot.&#10;Example scenarios:&#10;1. Neo is in the house. He is not in the park.&#10;    Revie:   Nasaan si 'Neo'?             Where is 'Neo'?&#10;    Jayvee: Nasa 'bahay'.                  In the 'house'.&#10;    Revie:   &quot;Wala&quot; sya sa parke.       He's &quot;not&quot; in the park.&#10;2. Boracay is located in the Philippines. It is not located in China.&#10;    Jayvee: Nasaan ang 'Boracay'?     Where is 'Boracay'?&#10;    Jinky:    Nasa 'China'.                   It's in the China.&#10;    Jayvee: Hindi. Nasa 'Pilipinas'.      No. It's in the Philippines.&#10;&#10;Note the alternate use of &quot;hindi&quot; (negating the truth of a statement), and &quot;wala&quot; (negating the existence of someone)." textAlignment="JUSTIFY" wrappingWidth="697.193359375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <HBox alignment="CENTER" prefHeight="39.0" prefWidth="721.0" spacing="11.0">
+                                       <children>
+                                          <StackPane style="-fx-border-color: gray;">
+                                             <children>
+                                                <Text fx:id="choiceMD3_4" layoutX="55.0" layoutY="162.009765625" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" text="stasyon ng pulis">
+                                                   <cursor>
+                                                      <Cursor fx:constant="OPEN_HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <StackPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </StackPane.margin>
+                                                </Text>
+                                             </children>
+                                          </StackPane>
+                                          <StackPane style="-fx-border-color: gray;">
+                                             <children>
+                                                <Text fx:id="choiceMD3_7" layoutX="86.0" layoutY="237.009765625" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="istadyum">
+                                                   <cursor>
+                                                      <Cursor fx:constant="OPEN_HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <StackPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </StackPane.margin>
+                                                </Text>
+                                             </children>
+                                          </StackPane>
+                                          <StackPane style="-fx-border-color: gray;">
+                                             <children>
+                                                <Text fx:id="choiceMD3_2" layoutX="97.0" layoutY="112.009765625" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="ospital">
+                                                   <cursor>
+                                                      <Cursor fx:constant="OPEN_HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <StackPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </StackPane.margin>
+                                                </Text>
+                                             </children>
+                                          </StackPane>
+                                          <StackPane style="-fx-border-color: gray;">
+                                             <children>
+                                                <Text fx:id="choiceMD3_6" layoutX="99.0" layoutY="212.009765625" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="lagnat">
+                                                   <cursor>
+                                                      <Cursor fx:constant="OPEN_HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <StackPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </StackPane.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </StackPane>
+                                          <StackPane style="-fx-border-color: gray;">
+                                             <children>
+                                                <Text fx:id="choiceMD3_5" layoutX="101.0" layoutY="187.009765625" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="parke">
+                                                   <cursor>
+                                                      <Cursor fx:constant="OPEN_HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <StackPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </StackPane.margin>
+                                                </Text>
+                                             </children>
+                                          </StackPane>
+                                          <StackPane style="-fx-border-color: gray;">
+                                             <children>
+                                                <Text fx:id="choiceMD3_8" layoutX="103.0" layoutY="262.009765625" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="sipon">
+                                                   <cursor>
+                                                      <Cursor fx:constant="OPEN_HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <StackPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </StackPane.margin>
+                                                </Text>
+                                             </children>
+                                          </StackPane>
+                                          <StackPane style="-fx-border-color: gray;">
+                                             <children>
+                                                <Text fx:id="choiceMD3_1" layoutX="103.0" layoutY="87.009765625" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="party">
+                                                   <cursor>
+                                                      <Cursor fx:constant="OPEN_HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <StackPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </StackPane.margin>
+                                                </Text>
+                                             </children>
+                                          </StackPane>
+                                          <StackPane style="-fx-border-color: gray;">
+                                             <children>
+                                                <Text fx:id="choiceMD3_3" layoutX="105.0" layoutY="137.009765625" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="John">
+                                                   <cursor>
+                                                      <Cursor fx:constant="OPEN_HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <StackPane.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </StackPane.margin>
+                                                </Text>
+                                             </children>
+                                          </StackPane>
+                                       </children>
+                                    </HBox>
+                                    <ToggleButton fx:id="checkAnswerMD3" contentDisplay="TEXT_ONLY" maxHeight="25.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="25.0" text="Check answer">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <TextFlow lineSpacing="20.0">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="10.0" strokeType="INSIDE" width="10.0" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Correct">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     ">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="10.0" strokeType="INSIDE" width="10.0" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Incorrect">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </TextFlow>
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </ToggleButton>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. John is not in the police station. He is in the hospital because he has a fever.">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Neo: Nasaan si" wrappingWidth="140.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blankMD3_1" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="25.013671875" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="removeMD3_1" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jv:   Wala. May" wrappingWidth="140.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blankMD3_4" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" siya." wrappingWidth="55.013671875" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="removeMD3_4" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vie:  Wala sya sa " wrappingWidth="160.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blankMD3_2" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="_________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="60.013671875" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="removeMD3_2" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cas: Nasa" wrappingWidth="95.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blankMD3_3" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="___________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" siya." wrappingWidth="55.013671875" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="removeMD3_3" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. The party is located in the stadium. It is not located in the park.">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jayvee: Nasaan ang" wrappingWidth="180.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blankMD3_5" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="___________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="25.013671875" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="removeMD3_5" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jinky:    Nasa" wrappingWidth="125.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blankMD3_6" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="_________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.013671875" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="removeMD3_6" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jonnel:  Wala sa" wrappingWidth="150.013671875">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fx:id="blankMD3_7" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="_________________" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.013671875" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Hyperlink fx:id="removeMD3_7" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="dialogVariationTab" closable="false" disable="true" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Dialog&#10;Variation">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="chatBoxTF" layoutX="10.0" layoutY="548.0" prefHeight="39.0" prefWidth="630.0" promptText="Write a message...">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <ListView fx:id="chatBoxLV" focusTraversable="false" layoutX="5.0" layoutY="266.0" prefHeight="275.0" prefWidth="720.0" style="-fx-font-size: 20;" />
+                        <Button fx:id="sendButton" layoutX="648.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleSendButton" text="Send">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="7.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Communicate using Tagalog about the situation given below.&#10;Scenario: Chat box conversation with your friend Jinky.&#10;Things to remember:&#10; Jinky will not reply if your answer is incorrect.&#10; Your answer must follow the goals orderly, and according to previous dialogs.&#10; This practice will end after all goals are accomplished.&#10;Goals:" wrappingWidth="717.1484375">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Label contentDisplay="RIGHT" layoutX="14.0" layoutY="183.0" text="1. You must answer Jinky's questions.">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <CubicCurve fx:id="firstGoal" controlX1="30.0" controlY1="-30.0" controlY2="30.0" endX="-5.0" fill="GREEN" layoutX="10.0" layoutY="11.0" startX="1.0" startY="5.0" stroke="GREEN" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" visible="false" />
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" layoutX="14.0" layoutY="208.0" text="2. You must ask her current location.">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <CubicCurve fx:id="secondGoal" controlX1="30.0" controlY1="-30.0" controlY2="30.0" endX="-5.0" fill="GREEN" startX="1.0" startY="5.0" stroke="GREEN" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" visible="false" />
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" layoutX="14.0" layoutY="233.0" text="3. You must ask where is John.">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <CubicCurve fx:id="thirdGoal" controlX1="30.0" controlY1="-30.0" controlY2="30.0" endX="-5.0" fill="GREEN" startX="1.0" startY="5.0" stroke="GREEN" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" visible="false" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="grammarExerciseTab" closable="false" disable="true" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Grammar&#10;Exercise">
+               <content>
+                  <ScrollPane hbarPolicy="NEVER" prefViewportHeight="588.009765625" prefViewportWidth="707.09765625">
+                     <content>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All of the sentences below contain grammatical errors.&#10;Rewrite the sentence with correct answer for each number." wrappingWidth="705.537109375">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Maganda umaga po, Gng. Cruz." wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF1" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: Good morning, Mrs. Cruz." style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Nasaan ang John?" wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF2" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: Where is John?" style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Kumustang po kayo?" wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF3" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: How are you(pl.)?" style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Nasa laybrari si titser." wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF4" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: Teacher is in the library." style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. May ubo si ako." wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF5" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: I have cold." style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6. Nasaan Jinky?" wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF6" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: Where is Jinky?" style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7. Kumusta kayo, Neo?" wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF7" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: How are you, Neo?" style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8. Kumusta po ka?" wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF8" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: How are you(sing.)?" style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9. Mabuting naman." wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF9" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: fine." style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text layoutX="13.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10. Nasaan si gymnasium?" wrappingWidth="705.537109375">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="115.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct answer:" wrappingWidth="145.537109375">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="grammarExerciseTF10" layoutX="180.0" layoutY="115.0" prefHeight="39.0" prefWidth="500.0" promptText="Translate: Where is the gymnasium?" style="-fx-border-width: 0; -fx-border-radius: 100;">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="grammarSubmitButton" alignment="CENTER" mnemonicParsing="false" onAction="#submitGrammarExercise" text="Submit">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab fx:id="vocabularyExerciseTab" closable="false" disable="true" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Vocabulary&#10;Exercise">
+               <content>
+                  <ScrollPane hbarPolicy="NEVER" prefViewportHeight="350.0" prefViewportWidth="728.0">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <ScrollPane prefHeight="350.0" prefViewportHeight="212.0" prefViewportWidth="461.0" prefWidth="463.0">
+                                 <content>
+                                    <VBox layoutX="8.0" layoutY="406.0" prefHeight="347.0" prefWidth="460.0" style="-fx-border-color: gray;">
+                                       <children>
+                                          <BorderPane maxWidth="425.0" minWidth="425.0" prefHeight="25.0" prefWidth="425.0">
+                                             <left>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vocabulary Test 1" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Text>
+                                             </left>
+                                             <VBox.margin>
+                                                <Insets top="2.0" />
+                                             </VBox.margin>
+                                             <right>
+                                                <Button fx:id="vocabularyExercise1Submit" mnemonicParsing="false" onAction="#submitVocabularyExercise" text="Submit" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                             </right>
+                                          </BorderPane>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Match the Tagalog and English words. &#10;Drag items from the box to blank fields.">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. they:" wrappingWidth="195.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank1" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove1" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" onAction="#removeAnswer" text="Remove" visible="false">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. he/she:" wrappingWidth="196.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank2" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove2" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" onAction="#removeAnswer" text="Remove" visible="false">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="25.0" prefWidth="409.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. where:" wrappingWidth="195.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank3" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove3" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4. morning:" wrappingWidth="194.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank4" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove4" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="25.0" prefWidth="409.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5. you(sing.):" wrappingWidth="193.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank5" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove5" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6. park:" wrappingWidth="194.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank6" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove6" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="7. noon:" wrappingWidth="195.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank7" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove7" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8. afternoon:" wrappingWidth="195.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank8" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove8" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9. pretty, good:" wrappingWidth="195.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank9" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove9" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10. you(pl.):" wrappingWidth="196.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fx:id="vocabularyExercise1Blank10" onDragDropped="#dragDropped" onDragExited="#dragExited" onDragOver="#dragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="__________" underline="true" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <Hyperlink fx:id="vocabularyExercise1Remove10" onAction="#removeAnswer" text="Remove" visible="false" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                              <VBox fx:id="choiceBox1" alignment="CENTER" layoutX="463.0" prefHeight="348.0" prefWidth="253.0" spacing="5.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <Text fx:id="vocabularyExercise1Choice1" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="umaga">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice2" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="maganda">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice3" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="hapon">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice4" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="tanghali">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice5" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="nasaan">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice6" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="sila">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice7" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="ka">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice8" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="kayo">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice9" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="parke">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="vocabularyExercise1Choice10" onDragDetected="#choiceDragDetected" onDragDone="#dragDone" strokeType="OUTSIDE" strokeWidth="0.0" text="siya">
+                                       <cursor>
+                                          <Cursor fx:constant="OPEN_HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <ScrollPane layoutY="350.0" prefHeight="265.0" prefViewportHeight="212.0" prefViewportWidth="461.0" prefWidth="716.0">
+                                 <content>
+                                    <VBox layoutX="8.0" layoutY="406.0" prefHeight="468.0" prefWidth="710.0" spacing="10.0" style="-fx-border-color: gray;">
+                                       <children>
+                                          <BorderPane>
+                                             <left>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vocabulary Test 2" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Text>
+                                             </left>
+                                             <VBox.margin>
+                                                <Insets right="15.0" top="2.0" />
+                                             </VBox.margin>
+                                             <right>
+                                                <Button fx:id="vocabularyExercise2Submit" mnemonicParsing="false" onAction="#submitVocabularyExercise" text="Submit" BorderPane.alignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                             </right>
+                                          </BorderPane>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the Tagalog word or phrase defined:">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. respect particle" wrappingWidth="176.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="455.0" spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice1" mnemonicParsing="false" text="po'">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice2" mnemonicParsing="false" text="naman">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice3" mnemonicParsing="false" text="kayo">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice4" mnemonicParsing="false" text="maganda">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice5" mnemonicParsing="false" text="Gng.">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. too, also" wrappingWidth="119.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice6" mnemonicParsing="false" text="Bb.">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice7" mnemonicParsing="false" text="hapon">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice8" mnemonicParsing="false" text="naman">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice9" mnemonicParsing="false" text="laybrari">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice10" mnemonicParsing="false" text="sila">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. there is" wrappingWidth="119.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice11" mnemonicParsing="false" text="lagnat">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice12" mnemonicParsing="false" text="sipon">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice13" mnemonicParsing="false" text="si">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice14" mnemonicParsing="false" text="may">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice15" mnemonicParsing="false" text="nasa">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4. person name-marker" wrappingWidth="225.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice16" mnemonicParsing="false" text="ang">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice17" mnemonicParsing="false" text="si">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice18" mnemonicParsing="false" text="ewan">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice19" mnemonicParsing="false" text="ko">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice20" mnemonicParsing="false" text="ng">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="25.0" prefWidth="409.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5. place marker" wrappingWidth="176.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice21" mnemonicParsing="false" text="ang">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice22" mnemonicParsing="false" text="sa">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice23" mnemonicParsing="false" text="si">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice24" mnemonicParsing="false" text="ng">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice25" mnemonicParsing="false" text="ni">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6. work" wrappingWidth="119.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice26" mnemonicParsing="false" text="trabaho">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice27" mnemonicParsing="false" text="pulis">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice28" mnemonicParsing="false" text="sa">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice29" mnemonicParsing="false" text="hindi'">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice30" mnemonicParsing="false" text="wala'">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="7. house" wrappingWidth="119.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice31" mnemonicParsing="false" text="ospital">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice32" mnemonicParsing="false" text="bahay">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice33" mnemonicParsing="false" text="party">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice34" mnemonicParsing="false" text="umaga">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice35" mnemonicParsing="false" text="hapon">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8. How are you?" wrappingWidth="176.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice36" mnemonicParsing="false" text="Ewan ko?">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice37" mnemonicParsing="false" text="Kumusta?">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice38" mnemonicParsing="false" text="Nasaan ka ba?">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9. Fine!" wrappingWidth="119.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice39" mnemonicParsing="false" text="Mabuti!">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice40" mnemonicParsing="false" text="Ewan!">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice41" mnemonicParsing="false" text="Hindi!">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice42" mnemonicParsing="false" text="Wala!">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10. illness" wrappingWidth="119.013671875">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice43" mnemonicParsing="false" text="maganda">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice44" mnemonicParsing="false" text="sipon">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice45" mnemonicParsing="false" text="sakit">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                      <ToggleButton fx:id="vocabularyExercise2Choice46" mnemonicParsing="false" text="tanghali">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </ToggleButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab fx:id="writingExerciseTab" closable="false" disable="true" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Writing&#10;Exercise">
+               <content>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Text cache="true" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rewrite the dialog with Pedro &amp; Juan as the Characters. Pedro asks for Maria. Maria is ill and she's in the hospital.&#10;Note:  2 points each (Correct grammar &amp; Correct translation).&#10;          Do not use respect particle.&#10;          Include correct punctuations." textAlignment="JUSTIFY" wrappingWidth="711.79296875" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <VBox alignment="CENTER" layoutX="14.0" layoutY="103.0" prefHeight="156.0" prefWidth="700.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField editable="false" focusTraversable="false" prefHeight="39.0" prefWidth="80.0" text="Pedro">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="writingExerciseTF1" prefHeight="39.0" prefWidth="630.0" promptText="Good evening, Juan.">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField editable="false" focusTraversable="false" prefHeight="39.0" prefWidth="80.0" text="Juan">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="writingExerciseTF2" prefHeight="39.0" prefWidth="630.0" promptText="Good evening, Pedro.">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField editable="false" focusTraversable="false" prefHeight="39.0" prefWidth="80.0" text="Pedro">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="writingExerciseTF3" prefHeight="39.0" prefWidth="630.0" promptText="Where is Maria?">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField editable="false" focusTraversable="false" prefHeight="39.0" prefWidth="80.0" text="Juan">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="writingExerciseTF4" prefHeight="39.0" prefWidth="630.0" promptText="She is in the hospital.">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField editable="false" focusTraversable="false" prefHeight="39.0" prefWidth="80.0" text="Juan">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="writingExerciseTF5" prefHeight="39.0" prefWidth="630.0" promptText="She's ill.">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="writingExerciseSubmit" alignment="CENTER" mnemonicParsing="false" onAction="#submitWritingExercise" text="Submit">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab fx:id="pronunciationDrillsTab" closable="false" disable="true" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Pronunciation&#10;Drills &amp;&#10;Exercise">
+               <content>
+                  <ScrollPane prefViewportHeight="359.0" prefViewportWidth="729.0" style="-fx-font-size: 20;">
+                     <content>
+                        <VBox prefHeight="713.0" prefWidth="710.0">
+                           <children>
+                              <TextFlow layoutX="14.0" layoutY="77.0" prefHeight="134.0" prefWidth="729.0" AnchorPane.bottomAnchor="486.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Listen to the following words, phrases, and sentences and say it aloud to enhance your pronunciation. To start the pronunciation exercise, click the button at the end of these drills.&#10;Click the button to hear the sound.&#10;&#10;1. Sound Drill:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox alignment="BASELINE_CENTER" spacing="10.0">
+                                       <children>
+                                          <Button fx:id="pronunciatonExerciseButton1" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="/a/">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Button>
+                                          <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="/e/">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Button>
+                                          <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="/i/">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Button>
+                                          <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="/o/">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Button>
+                                          <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="/u/">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" top="10.0" />
+                                 </padding>
+                              </TextFlow>
+                              <TableView fx:id="pronunciationTable" layoutX="14.0" layoutY="134.0" maxWidth="710.0" minHeight="180.0" minWidth="700.0" prefHeight="180.0" prefWidth="700.0" style="-fx-font-size: 18; -fx-border-width: 2;" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="_a" editable="false" prefWidth="75.0" text="/a/" />
+                                  <TableColumn fx:id="_e" editable="false" prefWidth="75.0" text="/e/" />
+                                    <TableColumn fx:id="_i" editable="false" prefWidth="75.0" text="/i/" />
+                                    <TableColumn fx:id="_o" editable="false" prefWidth="75.0" text="/o/" />
+                                    <TableColumn fx:id="_u" editable="false" prefWidth="75.0" text="/u/" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Text layoutX="14.0" layoutY="366.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In some instances, /i/ and /e/, and /o/ and /u/ alternate freely.">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Word drill: Stress">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="uma'ga">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="tanghali'">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="ha'pon">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="gabi'">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="Ginoong'">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="Gi'nang">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="Binibi'ning">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#pronunciationDrillSound" text="naman'">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Sentence drill">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Magandang'" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Hyperlink fx:id="pronunciatonExerciseHyperlink1" onAction="#sentenceDrillSound" text="uma'ga" visited="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(po'),">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Hyperlink fx:id="pronunciatonExerciseHyperlink5" onAction="#sentenceDrillSound" text="Bb." visited="true" />
+                                    <Text lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Santos.">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="586.0" spacing="60.0">
+                                 <children>
+                                    <Hyperlink fx:id="pronunciatonExerciseHyperlink2" onAction="#sentenceDrillSound" text="gabi'">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="pronunciatonExerciseHyperlink6" onAction="#sentenceDrillSound" text="G.">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Hyperlink>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="586.0" spacing="40.0">
+                                 <children>
+                                    <Hyperlink fx:id="pronunciatonExerciseHyperlink3" onAction="#sentenceDrillSound" text="tanghali'">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Hyperlink>
+                                    <Hyperlink fx:id="pronunciatonExerciseHyperlink7" onAction="#sentenceDrillSound" text="Gng.">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Hyperlink>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Hyperlink fx:id="pronunciatonExerciseHyperlink4" onAction="#sentenceDrillSound" text="ha'pon">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="300.0" />
+                                 </VBox.margin>
+                              </Hyperlink>
+                              <Button fx:id="startPronunciationDrill" alignment="CENTER" mnemonicParsing="false" onAction="#pronunciationDrills" text="Start Pronunciation Drills" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab fx:id="selfAssessmentListTab" closable="false" disable="true" onSelectionChanged="#handleTabSelection" style="-fx-rotate: 90; -fx-font: 20px System;" text="Self&#10;Assessment&#10;List">
+               <content>
+                  <VBox alignment="TOP_CENTER" style="-fx-font-size: 20;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="By the end of this lesson you should be able to:&#10;• Use the expressions mgandang umaga/ hapon/ gabi/ tanghali' and kumusta ka/ kayo to greet others.&#10;• Use the respect particles po' and the plural second person pronoun kayo when greeting or responding to older people.&#10;• Ask and respond to nasan questions.&#10;• Recognize the difference between English and Tagalog simple vowel sounds.&#10;&#10;If you find it difficult to do any of the above items, go back to the part of the lesson you have trouble with and practice again. Below are graphs of results." textAlignment="JUSTIFY" wrappingWidth="725.0" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Pagination fx:id="paginationGraph" cache="true" maxPageIndicatorCount="4" pageCount="4" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="700.0" minWidth="900.0" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LearningModuleController">
+   <children>
+      <StackPane cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TitledPane cache="true" collapsible="false" contentDisplay="RIGHT" graphicTextGap="500.0" maxHeight="1.7976931348623157E308" maxWidth="900.0" prefHeight="700.0" prefWidth="900.0" text="Lessons" wrapText="true" StackPane.alignment="CENTER">
+               <content>
+                  <ScrollPane cache="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="900.0" minWidth="900.0" prefWidth="900.0" vbarPolicy="ALWAYS">
+                    <content>
+                        <VBox cache="true" focusTraversable="true" maxHeight="1.7976931348623157E308">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 1" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson1Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Using Common Everyday Greetings and Inquiries" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson1" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 2" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson2Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Extending Greetings, Giving Instructions, and Taking Leave" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson2" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 3" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson3Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Asking for Tagalog Equivalents and Identifying Objects" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson3" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 4" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson4Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifying Persons and Occupations" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson4" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 5" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson5Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Asking about a Newcomer" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson5" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 6" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson6Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Describing with Colors, Numbers, and Shapes" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson6" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 7" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson7Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Describing People, Objects, Food, and Nature" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson7" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 8" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson8Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Giving and Following Instructions" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson8" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 9" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson9Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Talking about Dates and Events" textOrigin="CENTER" wrappingWidth="650.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson9" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 10" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson10Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Inquiring and Explaining about Absences, Excuses, and Ailments" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson10" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 11" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson11Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Introducing Members of the Family" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson11" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 12" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson12Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Ownership" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson12" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 13" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson13Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Expressing and Inquiring about Likes and Dislikes" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson13" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 14" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson14Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Making Requests and Giving Commands" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson14" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 15" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson15Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Expressing the Desirability or Undesirability of Some Activities" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson15" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 16" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson16Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Expressing What One Wants or Doesn't Want to Do with Something" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson16" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 17" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson17Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Telling Time" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson17" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 18" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson18Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Talking about Past Events" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson18" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 19" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson19Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Talking about Coming Events" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson19" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 20" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson20Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Talking about Habitual Activities or Ongoing Events" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson20" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 21" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson21Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Describing Something Going On" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson21" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 22" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson22Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Stating Existence and Expressing Possession" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson22" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 23" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson23Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Giving and Following Directions" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson23" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 24" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson24Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Expressing Ability and Obligation" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson24" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lesson 25" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="lesson25Desc" cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Having Someone Do Something" textOrigin="CENTER" wrappingWidth="635.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson25" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Start">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="875.0" spacing="20.0" style="-fx-border-color: gray; -fx-border-radius: 10; -fx-border-width: 5;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appendixes" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text cache="true" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Vocabulary&#10;Verb Charts&#10;Major Affixes&#10;Types of Pronouns and Markers" textOrigin="CENTER" wrappingWidth="620.39453125">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="startLesson26" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartLesson" text="Open">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                    </content>
+                  </ScrollPane>
+               </content>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <HBox alignment="CENTER_RIGHT" cache="true" focusTraversable="true" prefHeight="39.0" prefWidth="290.0" spacing="10.0">
+                     <children>
+                        <Button alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#showHelp" text="Help">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#returnToHome" text="Home">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </graphic>
+            </TitledPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

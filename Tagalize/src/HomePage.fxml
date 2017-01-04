@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchorPane" cache="true" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="700.0" minWidth="900.0" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePageController">
+   <children>
+      <StackPane cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="900.0" AnchorPane.bottomAnchor="-11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+               <children>
+                  <Text cache="true" fill="#944d07" pickOnBounds="true" stroke="#ff8307" strokeLineJoin="BEVEL" strokeWidth="0.1" text="Tagalize" textAlignment="CENTER">
+                     <font>
+                        <Font name="Castellar" size="75.0" />
+                     </font>
+                  </Text>
+                  <Text id="title" cache="true" fill="#944d07" pickOnBounds="true" stroke="#ff8307" strokeLineJoin="BEVEL" strokeWidth="0.1" textAlignment="CENTER">
+                     <font>
+                        <Font name="Castellar" size="20.0" />
+                     </font>
+                  </Text>
+                  <Button id="startButton" fx:id="startButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="155.0" text="Start Learning">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text id="title" cache="true" fill="#944d07" pickOnBounds="true" stroke="#ff8307" strokeLineJoin="BEVEL" strokeWidth="0.1" textAlignment="CENTER">
+                     <font>
+                        <Font name="Castellar" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button id="startButton" fx:id="aboutButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="95.0" text="About">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </FlowPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
